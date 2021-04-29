@@ -317,6 +317,15 @@ void loop() {
     OffDice();
     while(true)
       {
+        for(int i=0;i<6;i++)
+        {
+          for(int j=0;j<6;j++)
+          {
+            LightOn(i,j);
+          }
+          delay(80);
+          LightOff();
+        }
         val = analogRead(irPin);
         if(val >= 10 && val <= 50)
         {
